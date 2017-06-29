@@ -16,6 +16,9 @@ add_library(tinyxml
   tinyxmlerror.cpp
   tinyxmlparser.cpp
 )
+list(APPEND PUBLIC_HEADERS tinyxml.h)
+list(APPEND PUBLIC_HEADERS tinystr.h)
+set_target_properties(tinyxml PROPERTIES PUBLIC_HEADER "${PUBLIC_HEADERS}")
 
 install(TARGETS tinyxml
   RUNTIME DESTINATION bin
