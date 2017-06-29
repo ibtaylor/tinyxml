@@ -43,6 +43,8 @@ distribution.
 #define DEBUG
 #endif
 
+// XXX just force to always on
+#define TIXML_USE_STL
 #ifdef TIXML_USE_STL
 	#include <string>
  	#include <iostream>

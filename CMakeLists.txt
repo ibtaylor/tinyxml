@@ -9,7 +9,6 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
-option(USE_STL "Compile using STL" ON)
 
 add_library(tinyxml
   tinystr.cpp
@@ -17,10 +16,6 @@ add_library(tinyxml
   tinyxmlerror.cpp
   tinyxmlparser.cpp
 )
-
-if (USE_STL)
-  target_compile_definitions(tinyxml PRIVATE TIXML_USE_STL)
-endif()
 
 install(TARGETS tinyxml
   RUNTIME DESTINATION bin
